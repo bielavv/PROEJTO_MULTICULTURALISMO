@@ -1,9 +1,9 @@
 /* style.css */
 /* Variáveis e reset */
 :root {
-    --verde-escuro: #1d5c3d;
-    --verde-medio: #3a9c6d;
-    --verde-claro: #7dc8a6;
+    --verde-escuro: #B36A48;
+    --verde-medio: #C18669;
+    --verde-claro: #D0A38B;
     --bege: #f5f0e6;
     --marrom: #8c5e3c;
     --ocre: #d9b384;
@@ -198,6 +198,7 @@ section:nth-child(odd) {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    object-position: 30% 20%;
 }
 
 .card-content {
@@ -223,12 +224,12 @@ section:nth-child(odd) {
 }
 
 .moda-etica-text {
-    padding-right: 20px;
+    padding-right: 50px;
 }
 
 .moda-etica-text h3 {
     color: var(--verde-escuro);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .moda-etica-text ul {
@@ -237,20 +238,17 @@ section:nth-child(odd) {
 }
 
 .moda-etica-text li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .moda-etica-img {
-    border-radius: 10px;
+    border-radius: 80px;
     overflow: hidden;
-    box-shadow: var(--sombra);
+    width: 500px;
+   
 }
 
-.moda-etica-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+
 
 /* Galeria */
 .gallery {
