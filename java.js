@@ -2,7 +2,15 @@
 // Menu mobile
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     const menu = document.querySelector('nav ul');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    menu.classList.toggle('show');
+});
+
+// Feche o menu ao clicar em um link (opcional)
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+        const menu = document.querySelector('nav ul');
+        menu.classList.remove('show');
+    });
 });
 
 // Scroll suave
