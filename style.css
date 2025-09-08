@@ -651,17 +651,29 @@ footer {
     }
   
   nav ul.show {
-    display: flex;
+    display: flex !important;
   }
   
   nav ul li {
     margin: 0;
     text-align: center;
   }
-  
+    nav a {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 0;
+  }
+    nav a:hover, nav a.active {
+    background-color: var(--verde-medio);
+  }
   .mobile-menu-btn {
     display: block;
     z-index: 1001;
+  }
+  /* Quando o menu está aberto, mudar o ícone para X */
+  .mobile-menu-btn.active i::before {
+    content: "\f00d";
   }
   
 }
