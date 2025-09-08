@@ -2,7 +2,27 @@
 // Menu mobile
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     const menu = document.querySelector('nav ul');
+    const btn = this;
+    
+    // Alternar visibilidade do menu
     menu.classList.toggle('show');
+    
+    // Alternar classe active no botão
+    btn.classList.toggle('active');
+    
+    // Prevenir que o clique se propague
+    event.stopPropagation();
+});
+
+// Fechar o menu ao clicar fora dele
+document.addEventListener('click', function(event) {
+    const menu = document.querySelector('nav ul');
+    const btn = document.querySelector('.mobile-menu-btn');
+    
+    if (!menu.contains(event.target) && event.target !== btn) {
+        menu.classList.remove('show');
+        btn.classList.remove('active');
+    }
 });
 
 // Feche o menu ao clicar em um link (opcional)
@@ -51,21 +71,3 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Validar formulário de contato
-document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Validação básica
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const oficina = document.getElementById('oficina').value;
-    
-    if (!nome || !email || !oficina) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        return;
-    }
-    
-    // Simulação de envio
-    alert('Inscrição enviada com sucesso! Entraremos em contato em breve.');
-    this.reset();
-});

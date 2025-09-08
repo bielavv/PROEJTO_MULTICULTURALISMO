@@ -124,6 +124,9 @@ nav a:hover, nav a.active {
     background-color: var(--verde-medio);
     color: var(--branco);
 }
+.mobile-menu-btn.active i::before {
+    content: "\f00d";
+  }
 
 .mobile-menu-btn {
     display: none;
@@ -629,6 +632,7 @@ footer {
 /* No media query para 768px */
 @media (max-width: 768px) {
   .header-container {
+    position: relative;
     flex-wrap: wrap;
   }
   
@@ -642,6 +646,8 @@ footer {
         left: 0;
         padding: 15px 0;
         gap: 0;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
   
   nav ul.show {
@@ -649,12 +655,13 @@ footer {
   }
   
   nav ul li {
-    margin: 10px 0;
+    margin: 0;
     text-align: center;
   }
   
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
   
 }
